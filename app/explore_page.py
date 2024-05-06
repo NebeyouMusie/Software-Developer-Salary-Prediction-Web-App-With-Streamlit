@@ -49,9 +49,29 @@ def show_explore_page():
     )
 
     data = df["Country"].value_counts()
+    countries = [
+        'United States of America',                              
+        'Germany',                                                 
+        'United Kingdom of Great Britain and Northern Ireland',     
+        'Canada',                                                   
+        'India',                                                    
+        'France',                                                   
+        'Netherlands',                                              
+        'Australia',                                                 
+        'Brazil',                                                    
+        'Spain',                                                     
+        'Sweden',                                                    
+        'Italy',                                                     
+        'Poland',                                                    
+        'Switzerland',                                               
+        'Denmark',                                                   
+        'Norway',                                                    
+        'Israel',
+    ]
+
 
     fig1, ax1 = plt.subplots()
-    ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
+    ax1.pie(data, labels=countries, autopct="%1.1f%%", startangle=90)
     ax1.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle.
 
     st.write("""#### Number of Data from different countries""")
