@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 
 def load_model():
-    with open('model.pkl', 'rb') as file:
+    with open('./Software-Developer-Salary-Prediction-Web-App-With-Streamlit/app/model.pkl', 'rb') as file:
         data = pickle.load(file)
     return data
 
@@ -16,7 +16,7 @@ le_education = data["le_education"]
 def show_predict_page():
     st.title('Software Developer Salary Prediction')
 
-    st.write('''### We need some information to predict teh salary ''')
+    st.write('''### We need some information to predict the salary ''')
 
     countries = (
         'United States of America',                              
