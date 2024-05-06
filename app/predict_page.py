@@ -9,9 +9,9 @@ def load_model():
 
 data = load_model()
 
-model = data['model']
-le_country = data['le_country']
-le_education = data['le_education']
+model = data["model"]
+le_country = data["le_country"]
+le_education = data["le_education"]
 
 def show_predict_page():
     st.title('Software Developer Salary Prediction')
@@ -55,12 +55,10 @@ def show_predict_page():
     if ok:
     # Ensure that the country and education variables are correctly transformed
     # into numerical values before they are passed to the model.
-        X = np.array([[country, education, experience]])
-        X[:, 0] = le_country.transform([X[:, 0]]) # Correctly transform the country
-        X[:, 1] = le_education.transform([X[:, 1]]) # Correctly transform the education
+        X = np.array([[country, education, experience ]])
+        X[:, 0] = le_country.transform(X[:,0])
+        X[:, 1] = le_education.transform(X[:,1])
         X = X.astype(float)
 
         salary = model.predict(X)
-        st.subheader(f'The estimated salary is ${salary[0]:.2f}')
-
-show_predict_page()
+        st.subheader(f"The estimated salary is ${salary[0]:.2f}")
