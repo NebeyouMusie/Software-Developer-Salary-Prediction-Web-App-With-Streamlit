@@ -56,10 +56,12 @@ def show_predict_page():
     # Ensure that the country and education variables are correctly transformed
     # into numerical values before they are passed to the model.
         X = np.array([[country, education, experience ]])
-        X[:, 0] = le_country.transform(X[:,0])
-        X[:, 1] = le_education.transform(X[:,1])
-        X[:, 2] = (X[:,2]).astype(float)
+        X[:, 0] = le_country.transform([X[:,0]])
+        X[:, 1] = le_education.transform([X[:,1]])
         X = X.astype(float)
 
-        salary = model.predict(X)
-        st.subheader(f"The estimated salary is ${salary[0]:.2f}")
+        try:
+            salary = model.predict(X)
+            st.subheader(f'The estimated salary is ${salary[0]:.2f}')
+        except Exception as e:
+            st.error(f"An error occurred: {e}")
