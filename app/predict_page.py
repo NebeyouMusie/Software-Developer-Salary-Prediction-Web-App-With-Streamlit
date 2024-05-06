@@ -58,6 +58,7 @@ def show_predict_page():
         X = np.array([[country, education, experience ]])
         X[:, 0] = le_country.transform(X[:,0])
         X[:, 1] = le_education.transform(X[:,1])
+        X[:, 2] = (X[:,2]).astype(float)
         X = X.astype(float)
 
         salary = model.predict(X)
