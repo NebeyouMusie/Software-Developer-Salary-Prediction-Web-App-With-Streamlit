@@ -34,7 +34,7 @@ def clean_education(x):
 
 st.cache_data
 def load_data():
-    df = pd.read_csv('../cleaned_data.csv')
+    df = pd.read_csv('cleaned_data.csv')
     return df
 
 df = load_data()
