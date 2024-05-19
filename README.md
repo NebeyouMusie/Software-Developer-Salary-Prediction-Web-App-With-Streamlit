@@ -34,11 +34,11 @@
     - `python -m venv venv`
     - `source venv/bin/activate`
  4. Navigate to the projects directory `cd ./Software-Developer-Salary-Prediction-Web-App-With-Streamlit` using your terminal
- 4. Install Libraries: `pip install -r requirements.txt`
- 5. Navigate to the `app` directory(`cd ./app`) then run `streamlit run app.py`
- 6. Open the link displayed in the terminal on your browser
- 7. `Predict` salary by providing all the values for the input fields specified
- 8. Choose the `Explore` option on the sidebar to have a look at some visualizations of the data
+ 5. Install Libraries: `pip install -r requirements.txt`
+ 6. Navigate to the `app` directory(`cd ./app`) then run `streamlit run app.py`
+ 7. Open the link displayed in the terminal on your browser
+ 8. `Predict` salary by providing all the values for the input fields specified
+ 9. Choose the `Explore` option on the sidebar to have a look at some visualizations of the data
 
 ## Acknowledgments
  - I would like to thank [Patrick Loeber](https://youtube.com/@patloeber?si=86RM0KTMIfti8xiV)
